@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { getDogs, getFavorites, toggleFavorite, isFavorite } from '../utils/storage';
+import { getDogs, getFavorites, toggleFavorite, getChallenges } from '../utils/storage';
 import Toast from '../components/Toast';
 import SnapawBanner from '../components/SnapawBanner';
 
@@ -51,6 +51,7 @@ export default function HomePage() {
     );
   }).length;
   const shelters = new Set(dogs.map((d) => d.shelter)).size;
+  const challengeCount = getChallenges().length;
 
   // Insert Snapaw banner after 2nd card
   const renderCards = () => {
@@ -131,6 +132,9 @@ export default function HomePage() {
         <div className="stat-item">
           <strong>{shelters}</strong>협력 보호소
         </div>
+        <div className="stat-item">
+          <strong>{challengeCount}</strong>챌린지 참여
+        </div>
       </div>
 
       {/* Filter */}
@@ -160,6 +164,12 @@ export default function HomePage() {
           </div>
         )}
         {renderCards()}
+      </div>
+
+      {/* Challenge Banner */}
+      <div className="challenge-banner">
+        <span>입양했다면 챌린지에 참여해주세요!</span>
+        <Link to="/challenge" className="challenge-banner-btn">참여하기</Link>
       </div>
 
       {/* Bottom bar */}

@@ -89,3 +89,23 @@ export function toggleFavorite(dogId) {
 export function isFavorite(dogId) {
   return getFavorites().includes(dogId);
 }
+
+// ===== Challenges =====
+const CHALLENGES_KEY = 'pawlink_challenges';
+
+export function getChallenges() {
+  const raw = localStorage.getItem(CHALLENGES_KEY);
+  return raw ? JSON.parse(raw) : [];
+}
+
+export function addChallenge(challenge) {
+  const challenges = getChallenges();
+  const newChallenge = {
+    ...challenge,
+    id: String(Date.now()),
+    createdAt: new Date().toISOString(),
+  };
+  challenges.unshift(newChallenge);
+  localStorage.setItem(CHALLENGES_KEY, JSON.stringify(challenges));
+  return newChallenge;
+}

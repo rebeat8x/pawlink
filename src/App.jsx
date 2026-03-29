@@ -5,6 +5,7 @@ import RegisterPage from './pages/RegisterPage';
 import DetailPage from './pages/DetailPage';
 import ReviewsPage from './pages/ReviewsPage';
 import ReportPage from './pages/ReportPage';
+import ChallengePage from './pages/ChallengePage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/dog/:id" element={<DetailPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/report" element={<ReportPage />} />
+        <Route path="/challenge" element={<ChallengePage />} />
       </Routes>
     </div>
   );

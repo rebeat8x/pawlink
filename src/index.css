@@ -121,7 +121,7 @@ textarea {
 /* ===== Stats Bar ===== */
 .stats-bar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 14px 16px;
   background: #fff;
   border-bottom: 0.5px solid var(--gray-200);
@@ -814,6 +814,111 @@ textarea {
 }
 
 .report-date {
+  font-size: 0.65rem;
+  color: var(--gray-400);
+}
+
+/* ===== Challenge Banner (Home) ===== */
+.challenge-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: #FFF0EC;
+}
+
+.challenge-banner span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.challenge-banner-btn {
+  flex-shrink: 0;
+  padding: 7px 16px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.challenge-banner-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== Challenge Page ===== */
+.challenge-grid {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.challenge-card {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.challenge-heart-bg {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  font-size: 48px;
+  color: #FFF0EC;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+
+.challenge-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 12px;
+}
+
+.challenge-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.challenge-info {
+  padding: 12px 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.challenge-content:not(:has(.challenge-photo)) .challenge-info {
+  padding-left: 14px;
+}
+
+.challenge-dog-name {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.challenge-message {
+  font-size: 0.8rem;
+  color: var(--gray-700);
+  line-height: 1.4;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.challenge-meta {
+  display: flex;
+  gap: 4px;
   font-size: 0.65rem;
   color: var(--gray-400);
 }
