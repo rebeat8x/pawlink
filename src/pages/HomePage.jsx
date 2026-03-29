@@ -107,11 +107,21 @@ export default function HomePage() {
         </div>
       );
 
-      // Insert Snapaw banner after 2nd card
+      // Insert banners after 2nd card
       if (i === 1) {
         items.push(
           <div className="card-grid-banner" key="snapaw-banner">
             <SnapawBanner />
+          </div>
+        );
+        items.push(
+          <div className="card-grid-banner" key="pangpang-banner">
+            <div className="pangpang-banner">
+              <p className="pangpang-text">장건강 걱정된다면? 레반 유산균으로 시작하세요</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="pangpang-btn">
+                팡팡펫 보러가기
+              </a>
+            </div>
           </div>
         );
       }

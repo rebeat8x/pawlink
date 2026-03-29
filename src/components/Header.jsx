@@ -8,6 +8,7 @@ export default function Header() {
         <span>by PangpangPet</span>
       </Link>
       <nav className="header-nav">
+        <Link to="/tips" className="header-nav-link">건강정보</Link>
         <Link to="/reviews" className="header-nav-link">후기</Link>
         <Link to="/challenge" className="header-nav-link">챌린지</Link>
         <a href="#" className="header-link">팡팡펫 바로가기</a>

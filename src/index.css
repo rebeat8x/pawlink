@@ -923,6 +923,121 @@ textarea {
   color: var(--gray-400);
 }
 
+/* ===== PangpangPet Banner ===== */
+.pangpang-banner {
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  background: #E1F5EE;
+}
+
+.pangpang-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 12px;
+}
+
+.pangpang-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.pangpang-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Tips Page ===== */
+.tips-list {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.tip-category {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: var(--primary-light);
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.tip-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.tip-content {
+  font-size: 0.8rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tip-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.tip-tag {
+  font-size: 0.65rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.tip-cta-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tip-cta-btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.tip-cta-btn:hover {
+  opacity: 0.9;
+}
+
+.tip-cta-snapaw {
+  background: #5A47DC;
+}
+
+.tip-cta-pangpang {
+  background: var(--primary);
+}
+
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
   .page-wrapper {
