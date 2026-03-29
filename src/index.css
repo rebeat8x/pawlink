@@ -595,12 +595,11 @@ textarea {
 
 /* ===== Snapaw Banner ===== */
 .snapaw-banner {
-  border-radius: var(--radius);
-  padding: 20px 16px;
+  border-radius: 12px;
+  padding: 20px;
   text-align: center;
-  background: #fff;
-  color: var(--gray-900);
-  border: 1px solid var(--primary);
+  background: #F0EEFF;
+  border: 1px solid #5A47DC;
 }
 
 .snapaw-inline {
@@ -611,17 +610,24 @@ textarea {
   margin-top: 20px;
 }
 
-.snapaw-banner p {
-  font-size: 0.85rem;
-  margin-bottom: 10px;
-  font-weight: 500;
+.snapaw-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5A47DC;
+  margin-bottom: 4px;
+}
+
+.snapaw-subtitle {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 14px;
 }
 
 .snapaw-btn {
   display: inline-block;
   padding: 8px 20px;
   border-radius: 20px;
-  background: var(--primary);
+  background: #5A47DC;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
