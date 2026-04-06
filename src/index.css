@@ -75,15 +75,15 @@ textarea {
 .header {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: #fff;
   border-bottom: 1px solid var(--gray-200);
   position: sticky;
   top: 0;
   z-index: 100;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 .header-logo {
@@ -97,8 +97,14 @@ textarea {
   letter-spacing: -0.5px;
 }
 
-.header-link {
+.header a,
+.header button {
+  white-space: nowrap !important;
   font-size: 13px;
+  flex-shrink: 0;
+}
+
+.header-link {
   padding: 6px 10px;
   border-radius: 20px;
   background: transparent;
@@ -106,8 +112,6 @@ textarea {
   font-weight: 600;
   border: 1px solid var(--primary);
   transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .header-link:hover {
@@ -515,23 +519,22 @@ textarea {
 }
 
 /* ===== Header Nav ===== */
+.header nav,
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
+  gap: 8px;
+  flex-wrap: nowrap !important;
+  white-space: nowrap;
   margin-left: auto;
 }
 
 .header-nav-link {
-  font-size: 13px;
   padding: 4px 8px;
   border-radius: 20px;
   color: var(--gray-700);
   font-weight: 600;
   transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .header-nav-link:hover {
