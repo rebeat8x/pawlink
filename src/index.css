@@ -75,43 +75,39 @@ textarea {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding: 8px 16px;
   background: #fff;
   border-bottom: 1px solid var(--gray-200);
   position: sticky;
   top: 0;
   z-index: 100;
+  overflow: hidden;
 }
 
 .header-logo {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+  flex-shrink: 0;
 }
 
 .header-logo h1 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.5px;
 }
 
-.header-logo span {
-  font-size: 0.7rem;
-  color: var(--gray-400);
-  font-weight: 500;
-}
-
 .header-link {
-  font-size: 0.75rem;
-  padding: 6px 12px;
+  font-size: 13px;
+  padding: 6px 10px;
   border-radius: 20px;
   background: transparent;
   color: var(--primary);
   font-weight: 600;
   border: 1px solid var(--primary);
   transition: background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header-link:hover {
@@ -122,20 +118,20 @@ textarea {
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 14px 16px;
+  padding: 10px 16px;
   background: #fff;
   border-bottom: 0.5px solid var(--gray-200);
 }
 
 .stat-item {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--gray-500);
 }
 
 .stat-item strong {
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
   color: var(--gray-900);
@@ -152,9 +148,9 @@ textarea {
 
 .filter-chip {
   flex-shrink: 0;
-  padding: 6px 16px;
+  padding: 6px 10px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 12px;
   font-weight: 600;
   background: #fff;
   color: var(--gray-500);
@@ -522,16 +518,20 @@ textarea {
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .header-nav-link {
-  font-size: 0.75rem;
-  padding: 6px 12px;
+  font-size: 13px;
+  padding: 4px 8px;
   border-radius: 20px;
   color: var(--gray-700);
   font-weight: 600;
   transition: background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header-nav-link:hover {
@@ -1036,6 +1036,37 @@ textarea {
 
 .tip-cta-pangpang {
   background: var(--primary);
+}
+
+/* ===== Welcome Kit Banner ===== */
+.welcome-kit-banner {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: #F97316;
+  text-align: center;
+}
+
+.welcome-kit-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.welcome-kit-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #fff;
+  color: #F97316;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.welcome-kit-btn:hover {
+  opacity: 0.9;
 }
 
 /* ===== Responsive ===== */

@@ -83,7 +83,7 @@ export default function DetailPage() {
           </dl>
           <dl className="detail-info-item">
             <dt>성별</dt>
-            <dd>{dog.gender === '수' ? '수컷' : '암컷'}</dd>
+            <dd>{dog.gender === '수' ? '남아' : '여아'}{dog.neutered != null ? (dog.neutered ? ' (중성화O)' : ' (중성화X)') : ''}</dd>
           </dl>
           <dl className="detail-info-item">
             <dt>크기</dt>
@@ -107,6 +107,19 @@ export default function DetailPage() {
         </a>
 
         <SnapawBanner variant="detail" />
+
+        {/* 웰컴 키트 배너 */}
+        <div className="welcome-kit-banner">
+          <p className="welcome-kit-text">입양 확정 시 팡팡펫 웰컴 키트 100% 증정</p>
+          <a
+            href="https://pangpangpet.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="welcome-kit-btn"
+          >
+            자세히 보기
+          </a>
+        </div>
       </div>
 
       {toast && <Toast message={toast} onClose={() => setToast(null)} />}

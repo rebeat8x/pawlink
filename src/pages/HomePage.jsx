@@ -40,16 +40,8 @@ export default function HomePage() {
   }, []);
 
   // Stats
-  const sheltering = dogs.filter((d) => d.status === '보호중').length;
-  const now = new Date();
-  const thisMonth = dogs.filter((d) => {
-    const created = new Date(d.createdAt);
-    return (
-      d.status === '보호중' &&
-      created.getMonth() === now.getMonth() &&
-      created.getFullYear() === now.getFullYear()
-    );
-  }).length;
+  const sheltering = dogs.length;
+  const thisMonth = 0;
   const shelters = new Set(dogs.map((d) => d.shelter)).size;
   const challengeCount = getChallenges().length;
 
@@ -88,13 +80,13 @@ export default function HomePage() {
             </p>
             <p className="card-shelter">{dog.shelter}</p>
             <div className="card-actions">
-              <Link
-                to={`/dog/${dog.id}`}
+              <a
+                href={`tel:${dog.contact}`}
                 className="btn-inquiry"
                 onClick={(e) => e.stopPropagation()}
               >
                 입양 문의
-              </Link>
+              </a>
               <button
                 className="btn-share"
                 onClick={(e) => handleShare(e, dog)}
@@ -118,7 +110,7 @@ export default function HomePage() {
           <div className="card-grid-banner" key="pangpang-banner">
             <div className="pangpang-banner">
               <p className="pangpang-text">장건강 걱정된다면? 레반 유산균으로 시작하세요</p>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="pangpang-btn">
+              <a href="https://pangpangpet.com" target="_blank" rel="noopener noreferrer" className="pangpang-btn">
                 팡팡펫 보러가기
               </a>
             </div>
